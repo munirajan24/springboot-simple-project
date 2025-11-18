@@ -33,9 +33,16 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation 'javax.xml.bind:jaxb-api:2.3.0'
-    implementation 'com.mysql:mysql-connector-j:8.2.0' // <- use 8.x
+
+    // Remove MySQL driver:
+//    implementation 'com.mysql:mysql-connector-j:8.2.0' // <- use 8.x
+
+    // Add PostgreSQL driver
+    implementation 'org.postgresql:postgresql:42.6.0'
+    implementation 'org.flywaydb:flyway-database-postgresql:10.20.1'
+
     implementation 'org.flywaydb:flyway-core:10.20.1'
-    implementation 'org.flywaydb:flyway-mysql:10.20.1'   // <-- ADD THIS
+//    implementation 'org.flywaydb:flyway-mysql:10.20.1'   // <-- ADD THIS
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 }
 
